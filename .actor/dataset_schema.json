@@ -1,19 +1,22 @@
 {
-  "timestamp": "string",
-  "source": "string",
-  "playStoreList": [
-    {
-      "title": "string",
-      "appId": "string",
-      "url": "string",
-      "icon": "string",
-      "developer": "string",
-      "currency": "string",
-      "price": "number",
-      "free": "boolean",
-      "summary": "string",
-      "scoreText": "string",
-      "score": "number"
-    }
-  ]
+  "actorSpecification": 1,
+  "datasetSchema": {
+    "timestamp": "string",
+    "source": "string",
+    "playStoreList": [
+      {
+        "title": "string",
+        "appId": "string",
+        "url": "string",
+        "icon": "string",
+        "developer": "string",
+        "currency": "string",
+        "price": "number",
+        "free": "boolean",
+        "summary": "string",
+        "scoreText": "string",
+        "score": "number"
+      }
+    ]
+  }
 }
