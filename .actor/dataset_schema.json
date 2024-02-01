@@ -18,5 +18,12 @@
         "score": "number"
       }
     ]
-  }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {}
+    }
+  },
+  "fields": {}
 }
