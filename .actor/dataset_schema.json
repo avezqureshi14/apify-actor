@@ -1,5 +1,11 @@
 {
   "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {}
+    }
+  },
   "datasetSchema": {
     "timestamp": "string",
     "source": "string",
@@ -18,12 +24,5 @@
         "score": "number"
       }
     ]
-  },
-  "views": {
-    "overview": {
-      "title": "Overview",
-      "transformation": {}
-    }
-  },
-  "fields": {}
+  }
 }
