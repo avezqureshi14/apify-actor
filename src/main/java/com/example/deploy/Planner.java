@@ -12,6 +12,6 @@ public class Planner {
         commands.add("echo dry-run ecs update-service --cluster " + manifest.cluster()
                 + " --service " + manifest.service()
                 + " --desired-count " + manifest.desired());
-        return new DeployPlan(manifest.service(), true, commands);
+        return new DeployPlan(manifest.service(), true, List.copyOf(commands));
     }
 }
