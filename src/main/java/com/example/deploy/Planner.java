@@ -15,4 +15,11 @@ public class Planner {
                 + " --desired-count " + manifest.desired());
         return new DeployPlan(manifest.service(), true, List.copyOf(commands));
     }
+
+    public void check(Manifest manifest) {
+        if (manifest.service() == null || manifest.service().isBlank()) {
+            throw new IllegalArgumentException("service name is required");
+        }
+    }
+
 }
