@@ -14,6 +14,7 @@ public class PlanController {
 
     @PostMapping("/v1/plan")
     public DeployPlan plan(@RequestBody Manifest manifest) {
+        planner.check(manifest);
         return planner.plan(manifest);
     }
 
