@@ -20,6 +20,9 @@ public class Planner {
         if (manifest.service() == null || manifest.service().isBlank()) {
             throw new IllegalArgumentException("service name is required");
         }
+        if (manifest.cluster() == null || manifest.cluster().isBlank()) {
+            throw new IllegalArgumentException("cluster is required");
+        }
     }
 
 }
