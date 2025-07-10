@@ -23,6 +23,9 @@ public class Planner {
         if (manifest.cluster() == null || manifest.cluster().isBlank()) {
             throw new IllegalArgumentException("cluster is required");
         }
+        if (manifest.desired() < 0) {
+            throw new IllegalArgumentException("desired count cannot be negative");
+        }
     }
 
 }
