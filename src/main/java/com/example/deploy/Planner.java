@@ -28,4 +28,9 @@ public class Planner {
         }
     }
 
+
+    static boolean fargateCpu(int cpu) {
+        return cpu == 256 || cpu == 512 || cpu == 1024 || cpu == 2048 || cpu == 4096;
+    }
+
 }
