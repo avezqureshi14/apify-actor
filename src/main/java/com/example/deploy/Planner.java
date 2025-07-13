@@ -26,6 +26,9 @@ public class Planner {
         if (manifest.desired() < 0) {
             throw new IllegalArgumentException("desired count cannot be negative");
         }
+        if (!fargateCpu(manifest.cpu())) {
+            throw new IllegalArgumentException("cpu is not a fargate size");
+        }
     }
 
 
