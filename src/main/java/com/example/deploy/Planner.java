@@ -36,4 +36,15 @@ public class Planner {
         return cpu == 256 || cpu == 512 || cpu == 1024 || cpu == 2048 || cpu == 4096;
     }
 
+
+    static boolean memoryFits(int cpu, int memory) {
+        if (memory < 512 || memory > 30720) {
+            return false;
+        }
+        if (cpu == 256) {
+            return memory <= 2048;
+        }
+        return true;
+    }
+
 }
