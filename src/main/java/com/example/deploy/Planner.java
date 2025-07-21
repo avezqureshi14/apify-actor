@@ -29,6 +29,9 @@ public class Planner {
         if (!fargateCpu(manifest.cpu())) {
             throw new IllegalArgumentException("cpu is not a fargate size");
         }
+        if (!memoryFits(manifest.cpu(), manifest.memory())) {
+            throw new IllegalArgumentException("memory does not fit the cpu");
+        }
     }
 
 
