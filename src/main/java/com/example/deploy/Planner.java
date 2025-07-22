@@ -50,4 +50,9 @@ public class Planner {
         return true;
     }
 
+
+    static boolean plainImage(String image) {
+        return image != null && !image.isBlank() && !image.contains(" ") && !image.contains("://");
+    }
+
 }
