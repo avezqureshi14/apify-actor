@@ -32,6 +32,9 @@ public class Planner {
         if (!memoryFits(manifest.cpu(), manifest.memory())) {
             throw new IllegalArgumentException("memory does not fit the cpu");
         }
+        if (!plainImage(manifest.image())) {
+            throw new IllegalArgumentException("image should be a name, not a url");
+        }
     }
 
 
