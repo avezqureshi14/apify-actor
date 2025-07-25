@@ -13,4 +13,11 @@ class PlannerTest {
         assertTrue(plan.commands().stream().anyMatch(line -> line.contains("dry-run ecr push")));
         assertTrue(plan.commands().stream().noneMatch(line -> line.startsWith("aws ")));
     }
+
+    @Test
+    void blankServiceIsRejected() {
+        Manifest manifest = new Manifest("  ", "billing", "prod", "billing", 256, 512, 1);
+        assertThrows(IllegalArgumentException.class, () -> new Planner().check(manifest));
+    }
+
 }
