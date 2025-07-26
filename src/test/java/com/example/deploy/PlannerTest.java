@@ -20,4 +20,11 @@ class PlannerTest {
         assertThrows(IllegalArgumentException.class, () -> new Planner().check(manifest));
     }
 
+
+    @Test
+    void negativeDesiredIsRejected() {
+        Manifest manifest = new Manifest("billing", "billing", "prod", "billing", 256, 512, -1);
+        assertThrows(IllegalArgumentException.class, () -> new Planner().check(manifest));
+    }
+
 }
