@@ -1,0 +1,9 @@
+{
+  "service": "billing",
+  "image": "billing",
+  "cluster": "prod",
+  "container": "billing",
+  "cpu": 256,
+  "memory": 512,
+  "desired": 2
+}
