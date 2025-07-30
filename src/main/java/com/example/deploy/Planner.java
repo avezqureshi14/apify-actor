@@ -36,6 +36,9 @@ public class Planner {
         if (!plainImage(manifest.image())) {
             throw new IllegalArgumentException("image should be a name, not a url");
         }
+        if (manifest.container() == null || manifest.container().isBlank()) {
+            throw new IllegalArgumentException("container name is required");
+        }
     }
 
 
