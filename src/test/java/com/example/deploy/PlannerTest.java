@@ -27,4 +27,10 @@ class PlannerTest {
         assertThrows(IllegalArgumentException.class, () -> new Planner().check(manifest));
     }
 
+
+    @Test
+    void 1024_cpu_is_a_fargate_size() {
+        assertTrue(Planner.fargateCpu(1024));
+    }
+
 }
