@@ -33,4 +33,10 @@ class PlannerTest {
         assertTrue(Planner.fargateCpu(1024));
     }
 
+
+    @Test
+    void 300_cpu_is_not_a_fargate_size() {
+        assertFalse(Planner.fargateCpu(300));
+    }
+
 }
