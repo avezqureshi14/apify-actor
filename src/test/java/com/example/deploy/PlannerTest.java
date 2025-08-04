@@ -39,4 +39,10 @@ class PlannerTest {
         assertFalse(Planner.fargateCpu(300));
     }
 
+
+    @Test
+    void 256_cpu_cannot_take_4096_memory() {
+        assertFalse(Planner.memoryFits(256, 4096));
+    }
+
 }
