@@ -45,4 +45,10 @@ class PlannerTest {
         assertFalse(Planner.memoryFits(256, 4096));
     }
 
+
+    @Test
+    void 512_cpu_can_take_1024_memory() {
+        assertTrue(Planner.memoryFits(512, 1024));
+    }
+
 }
