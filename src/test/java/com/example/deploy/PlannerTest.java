@@ -51,4 +51,10 @@ class PlannerTest {
         assertTrue(Planner.memoryFits(512, 1024));
     }
 
+
+    @Test
+    void an_image_with_a_space_is_rejected() {
+        assertFalse(Planner.plainImage("my image"));
+    }
+
 }
