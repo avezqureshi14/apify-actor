@@ -57,4 +57,10 @@ class PlannerTest {
         assertFalse(Planner.plainImage("my image"));
     }
 
+
+    @Test
+    void an_https_image_url_is_rejected() {
+        assertFalse(Planner.plainImage("https://example.com/a"));
+    }
+
 }
