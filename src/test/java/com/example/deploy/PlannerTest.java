@@ -63,4 +63,10 @@ class PlannerTest {
         assertFalse(Planner.plainImage("https://example.com/a"));
     }
 
+
+    @Test
+    void a_normal_image_name_passes() {
+        assertTrue(Planner.plainImage("billing"));
+    }
+
 }
