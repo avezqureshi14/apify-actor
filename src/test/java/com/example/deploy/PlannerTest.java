@@ -69,4 +69,11 @@ class PlannerTest {
         assertTrue(Planner.plainImage("billing"));
     }
 
+
+    @Test
+    void zero_desired_count_is_allowed_for_a_scal() {
+        Manifest m = new Manifest("billing", "billing", "prod", "billing", 256, 512, 0);
+        new Planner().check(m);
+    }
+
 }
