@@ -76,4 +76,11 @@ class PlannerTest {
         new Planner().check(m);
     }
 
+
+    @Test
+    void missing_cluster_fails() {
+        Manifest m = new Manifest("billing", "billing", "", "billing", 256, 512, 1);
+        assertThrows(IllegalArgumentException.class, () -> new Planner().check(m));
+    }
+
 }
