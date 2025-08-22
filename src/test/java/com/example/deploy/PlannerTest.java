@@ -83,4 +83,11 @@ class PlannerTest {
         assertThrows(IllegalArgumentException.class, () -> new Planner().check(m));
     }
 
+
+    @Test
+    void missing_container_fails() {
+        Manifest m = new Manifest("billing", "billing", "prod", "", 256, 512, 1);
+        assertThrows(IllegalArgumentException.class, () -> new Planner().check(m));
+    }
+
 }
