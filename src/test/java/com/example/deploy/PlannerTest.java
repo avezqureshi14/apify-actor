@@ -90,4 +90,10 @@ class PlannerTest {
         assertThrows(IllegalArgumentException.class, () -> new Planner().check(m));
     }
 
+
+    @Test
+    void 4096_cpu_is_accepted() {
+        assertTrue(Planner.fargateCpu(4096));
+    }
+
 }
