@@ -96,4 +96,10 @@ class PlannerTest {
         assertTrue(Planner.fargateCpu(4096));
     }
 
+
+    @Test
+    void 8192_cpu_is_not_on_the_small_list() {
+        assertFalse(Planner.fargateCpu(8192));
+    }
+
 }
