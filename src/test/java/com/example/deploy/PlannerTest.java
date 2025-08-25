@@ -102,4 +102,10 @@ class PlannerTest {
         assertFalse(Planner.fargateCpu(8192));
     }
 
+
+    @Test
+    void memory_under_512_is_too_small() {
+        assertFalse(Planner.memoryFits(512, 256));
+    }
+
 }
