@@ -108,4 +108,11 @@ class PlannerTest {
         assertFalse(Planner.memoryFits(512, 256));
     }
 
+
+    @Test
+    void plan_keeps_the_service_name() {
+        DeployPlan plan = new Planner().plan(new Manifest("billing", "billing", "prod", "billing", 256, 512, 1));
+        assertEquals("billing", plan.service());
+    }
+
 }
