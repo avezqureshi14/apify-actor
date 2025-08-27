@@ -115,4 +115,11 @@ class PlannerTest {
         assertEquals("billing", plan.service());
     }
 
+
+    @Test
+    void docker_build_is_the_first_command() {
+        DeployPlan plan = new Planner().plan(new Manifest("billing", "billing", "prod", "billing", 256, 512, 1));
+        assertTrue(plan.commands().get(0).startsWith("docker build"));
+    }
+
 }
