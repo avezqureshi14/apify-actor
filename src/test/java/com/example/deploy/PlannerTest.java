@@ -122,4 +122,11 @@ class PlannerTest {
         assertTrue(plan.commands().get(0).startsWith("docker build"));
     }
 
+
+    @Test
+    void there_are_four_commands_in_the_basic_pla() {
+        DeployPlan plan = new Planner().plan(new Manifest("billing", "billing", "prod", "billing", 256, 512, 1));
+        assertEquals(4, plan.commands().size());
+    }
+
 }
