@@ -62,4 +62,9 @@ public class Planner {
         return image != null && !image.isBlank() && !image.contains(" ") && !image.contains("://");
     }
 
+
+    static boolean regionOk(String region) {
+        return region != null && region.matches("[a-z]{2}-[a-z]+-\\d");
+    }
+
 }
