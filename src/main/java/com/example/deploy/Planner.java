@@ -67,4 +67,9 @@ public class Planner {
         return region != null && region.matches("[a-z]{2}-[a-z]+-\\d");
     }
 
+
+    static boolean accountOk(String account) {
+        return account != null && account.matches("\\d{12}");
+    }
+
 }
