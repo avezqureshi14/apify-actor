@@ -72,4 +72,9 @@ public class Planner {
         return account != null && account.matches("\\d{12}");
     }
 
+
+    static boolean dockerfileOk(String path) {
+        return path != null && !path.startsWith("/") && !path.contains("..");
+    }
+
 }
