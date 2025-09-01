@@ -77,4 +77,12 @@ public class Planner {
         return path != null && !path.startsWith("/") && !path.contains("..");
     }
 
+
+    static String platformOrDefault(String platform) {
+        if (platform == null || platform.isBlank()) {
+            return "linux/amd64";
+        }
+        return platform;
+    }
+
 }
