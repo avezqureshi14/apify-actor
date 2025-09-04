@@ -85,4 +85,9 @@ public class Planner {
         return platform;
     }
 
+
+    static boolean graceOk(int seconds) {
+        return seconds >= 0 && seconds <= 300;
+    }
+
 }
