@@ -90,4 +90,9 @@ public class Planner {
         return seconds >= 0 && seconds <= 300;
     }
 
+
+    static boolean logGroupOk(String name) {
+        return name != null && !name.isBlank() && !name.contains(" ");
+    }
+
 }
