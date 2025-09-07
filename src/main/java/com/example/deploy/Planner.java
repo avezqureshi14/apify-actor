@@ -95,4 +95,9 @@ public class Planner {
         return name != null && !name.isBlank() && !name.contains(" ");
     }
 
+
+    static boolean roleOk(String role) {
+        return role == null || role.isBlank() || role.startsWith("arn:aws:iam::");
+    }
+
 }
