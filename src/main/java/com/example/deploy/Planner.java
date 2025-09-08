@@ -100,4 +100,9 @@ public class Planner {
         return role == null || role.isBlank() || role.startsWith("arn:aws:iam::");
     }
 
+
+    static boolean publicIpWord(String value) {
+        return value == null || value.equals("ENABLED") || value.equals("DISABLED");
+    }
+
 }
