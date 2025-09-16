@@ -105,4 +105,9 @@ public class Planner {
         return value == null || value.equals("ENABLED") || value.equals("DISABLED");
     }
 
+
+    static boolean percentOk(int value) {
+        return value >= 0 && value <= 100;
+    }
+
 }
