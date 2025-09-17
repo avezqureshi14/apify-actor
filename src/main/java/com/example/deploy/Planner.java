@@ -110,4 +110,9 @@ public class Planner {
         return value >= 0 && value <= 100;
     }
 
+
+    static boolean maxPercentOk(int value) {
+        return value >= 100 && value <= 200;
+    }
+
 }
