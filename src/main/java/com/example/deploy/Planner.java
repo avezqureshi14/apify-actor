@@ -115,4 +115,9 @@ public class Planner {
         return value >= 100 && value <= 200;
     }
 
+
+    static boolean tagOk(String tag) {
+        return tag != null && tag.matches("[A-Za-z0-9._-]{1,64}");
+    }
+
 }
