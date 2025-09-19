@@ -120,4 +120,12 @@ public class Planner {
         return tag != null && tag.matches("[A-Za-z0-9._-]{1,64}");
     }
 
+
+    static String tagOrPlan(String tag) {
+        if (tag == null || tag.isBlank()) {
+            return "plan";
+        }
+        return tag;
+    }
+
 }
