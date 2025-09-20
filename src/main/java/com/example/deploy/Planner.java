@@ -128,4 +128,12 @@ public class Planner {
         return tag;
     }
 
+
+    static String registryPrefix(String registry, String image) {
+        if (registry == null || registry.isBlank()) {
+            return image;
+        }
+        return registry + "/" + image;
+    }
+
 }
