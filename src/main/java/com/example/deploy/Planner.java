@@ -136,4 +136,9 @@ public class Planner {
         return registry + "/" + image;
     }
 
+
+    static String rollbackNote(String service) {
+        return "echo dry-run rollback would point " + service + " at the previous task";
+    }
+
 }
