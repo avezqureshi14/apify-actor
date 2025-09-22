@@ -141,4 +141,9 @@ public class Planner {
         return "echo dry-run rollback would point " + service + " at the previous task";
     }
 
+
+    static String breakerLine(boolean enabled) {
+        return enabled ? "echo dry-run deployment circuit breaker on" : "echo dry-run deployment circuit breaker off";
+    }
+
 }
