@@ -146,4 +146,12 @@ public class Planner {
         return enabled ? "echo dry-run deployment circuit breaker on" : "echo dry-run deployment circuit breaker off";
     }
 
+
+    static String subnetNote(String subnets) {
+        if (subnets == null || subnets.isBlank()) {
+            return "echo dry-run no subnet override";
+        }
+        return "echo dry-run subnets " + subnets;
+    }
+
 }
