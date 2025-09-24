@@ -154,4 +154,12 @@ public class Planner {
         return "echo dry-run subnets " + subnets;
     }
 
+
+    static String sgNote(String groups) {
+        if (groups == null || groups.isBlank()) {
+            return "echo dry-run no security group override";
+        }
+        return "echo dry-run security-groups " + groups;
+    }
+
 }
