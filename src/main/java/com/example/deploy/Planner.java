@@ -162,4 +162,9 @@ public class Planner {
         return "echo dry-run security-groups " + groups;
     }
 
+
+    static java.util.List<String> freeze(java.util.List<String> commands) {
+        return java.util.List.copyOf(commands);
+    }
+
 }
