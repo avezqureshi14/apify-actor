@@ -167,4 +167,9 @@ public class Planner {
         return java.util.List.copyOf(commands);
     }
 
+
+    static boolean serviceNameOk(String service) {
+        return service != null && !service.isBlank() && !service.contains("/") && service.length() <= 64;
+    }
+
 }
