@@ -172,4 +172,9 @@ public class Planner {
         return service != null && !service.isBlank() && !service.contains("/") && service.length() <= 64;
     }
 
+
+    static boolean clusterNameOk(String cluster) {
+        return cluster != null && !cluster.isBlank() && cluster.length() <= 64;
+    }
+
 }
