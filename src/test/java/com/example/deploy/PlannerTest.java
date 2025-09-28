@@ -129,4 +129,10 @@ class PlannerTest {
         assertEquals(4, plan.commands().size());
     }
 
+
+    @Test
+    void usEast1() {
+        assertTrue(Planner.regionOk("us-east-1"));
+    }
+
 }
