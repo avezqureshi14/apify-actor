@@ -135,4 +135,10 @@ class PlannerTest {
         assertTrue(Planner.regionOk("us-east-1"));
     }
 
+
+    @Test
+    void bareEastIsNotARegion() {
+        assertFalse(Planner.regionOk("east-1"));
+    }
+
 }
