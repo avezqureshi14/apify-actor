@@ -141,4 +141,10 @@ class PlannerTest {
         assertFalse(Planner.regionOk("east-1"));
     }
 
+
+    @Test
+    void twelveDigitAccount() {
+        assertTrue(Planner.accountOk("123456789012"));
+    }
+
 }
