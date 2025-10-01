@@ -147,4 +147,10 @@ class PlannerTest {
         assertTrue(Planner.accountOk("123456789012"));
     }
 
+
+    @Test
+    void shortAccount() {
+        assertFalse(Planner.accountOk("123"));
+    }
+
 }
