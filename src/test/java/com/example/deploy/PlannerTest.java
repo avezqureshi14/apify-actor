@@ -153,4 +153,11 @@ class PlannerTest {
         assertFalse(Planner.accountOk("123"));
     }
 
+
+    @Test
+    void dockerfileStaysRelative() {
+        assertTrue(Planner.dockerfileOk("Dockerfile"));
+        assertFalse(Planner.dockerfileOk("../Dockerfile"));
+    }
+
 }
