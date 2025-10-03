@@ -160,4 +160,10 @@ class PlannerTest {
         assertFalse(Planner.dockerfileOk("../Dockerfile"));
     }
 
+
+    @Test
+    void defaultPlatform() {
+        assertEquals("linux/amd64", Planner.platformOrDefault(""));
+    }
+
 }
