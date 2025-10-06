@@ -166,4 +166,10 @@ class PlannerTest {
         assertEquals("linux/amd64", Planner.platformOrDefault(""));
     }
 
+
+    @Test
+    void keepArmPlatform() {
+        assertEquals("linux/arm64", Planner.platformOrDefault("linux/arm64"));
+    }
+
 }
