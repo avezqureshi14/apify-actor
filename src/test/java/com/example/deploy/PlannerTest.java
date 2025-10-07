@@ -172,4 +172,11 @@ class PlannerTest {
         assertEquals("linux/arm64", Planner.platformOrDefault("linux/arm64"));
     }
 
+
+    @Test
+    void graceCap() {
+        assertTrue(Planner.graceOk(300));
+        assertFalse(Planner.graceOk(301));
+    }
+
 }
