@@ -179,4 +179,10 @@ class PlannerTest {
         assertFalse(Planner.graceOk(301));
     }
 
+
+    @Test
+    void negativeGrace() {
+        assertFalse(Planner.graceOk(-1));
+    }
+
 }
