@@ -185,4 +185,11 @@ class PlannerTest {
         assertFalse(Planner.graceOk(-1));
     }
 
+
+    @Test
+    void logGroupSpaces() {
+        assertFalse(Planner.logGroupOk("my group"));
+        assertTrue(Planner.logGroupOk("/ecs/billing"));
+    }
+
 }
