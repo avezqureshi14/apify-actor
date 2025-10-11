@@ -192,4 +192,10 @@ class PlannerTest {
         assertTrue(Planner.logGroupOk("/ecs/billing"));
     }
 
+
+    @Test
+    void roleArn() {
+        assertTrue(Planner.roleOk("arn:aws:iam::123456789012:role/ecsTask"));
+    }
+
 }
