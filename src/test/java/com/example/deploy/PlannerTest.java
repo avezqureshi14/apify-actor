@@ -198,4 +198,10 @@ class PlannerTest {
         assertTrue(Planner.roleOk("arn:aws:iam::123456789012:role/ecsTask"));
     }
 
+
+    @Test
+    void bareRoleName() {
+        assertFalse(Planner.roleOk("ecsTask"));
+    }
+
 }
