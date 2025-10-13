@@ -204,4 +204,10 @@ class PlannerTest {
         assertFalse(Planner.roleOk("ecsTask"));
     }
 
+
+    @Test
+    void emptyRoleIsFine() {
+        assertTrue(Planner.roleOk(""));
+    }
+
 }
