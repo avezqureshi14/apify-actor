@@ -210,4 +210,11 @@ class PlannerTest {
         assertTrue(Planner.roleOk(""));
     }
 
+
+    @Test
+    void publicIpWords() {
+        assertTrue(Planner.publicIpWord("ENABLED"));
+        assertFalse(Planner.publicIpWord("yes"));
+    }
+
 }
