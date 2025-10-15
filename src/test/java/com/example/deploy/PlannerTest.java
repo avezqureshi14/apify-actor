@@ -217,4 +217,11 @@ class PlannerTest {
         assertFalse(Planner.publicIpWord("yes"));
     }
 
+
+    @Test
+    void minHealthy() {
+        assertTrue(Planner.percentOk(50));
+        assertFalse(Planner.percentOk(140));
+    }
+
 }
