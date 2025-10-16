@@ -224,4 +224,11 @@ class PlannerTest {
         assertFalse(Planner.percentOk(140));
     }
 
+
+    @Test
+    void maxPercentCeiling() {
+        assertTrue(Planner.maxPercentOk(200));
+        assertFalse(Planner.maxPercentOk(99));
+    }
+
 }
