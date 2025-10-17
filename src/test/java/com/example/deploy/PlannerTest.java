@@ -231,4 +231,10 @@ class PlannerTest {
         assertFalse(Planner.maxPercentOk(99));
     }
 
+
+    @Test
+    void latestTag() {
+        assertTrue(Planner.tagOk("latest"));
+    }
+
 }
