@@ -237,4 +237,10 @@ class PlannerTest {
         assertTrue(Planner.tagOk("latest"));
     }
 
+
+    @Test
+    void tagWithSpace() {
+        assertFalse(Planner.tagOk("my tag"));
+    }
+
 }
