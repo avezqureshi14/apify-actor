@@ -243,4 +243,10 @@ class PlannerTest {
         assertFalse(Planner.tagOk("my tag"));
     }
 
+
+    @Test
+    void missingTagBecomesPlan() {
+        assertEquals("plan", Planner.tagOrPlan(null));
+    }
+
 }
