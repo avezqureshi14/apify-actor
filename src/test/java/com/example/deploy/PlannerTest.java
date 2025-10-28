@@ -249,4 +249,11 @@ class PlannerTest {
         assertEquals("plan", Planner.tagOrPlan(null));
     }
 
+
+    @Test
+    void registryPrefix() {
+        assertEquals("123.dkr.ecr.us-east-1.amazonaws.com/billing",
+                Planner.registryPrefix("123.dkr.ecr.us-east-1.amazonaws.com", "billing"));
+    }
+
 }
