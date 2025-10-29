@@ -256,4 +256,10 @@ class PlannerTest {
                 Planner.registryPrefix("123.dkr.ecr.us-east-1.amazonaws.com", "billing"));
     }
 
+
+    @Test
+    void noRegistry() {
+        assertEquals("billing", Planner.registryPrefix("", "billing"));
+    }
+
 }
