@@ -262,4 +262,11 @@ class PlannerTest {
         assertEquals("billing", Planner.registryPrefix("", "billing"));
     }
 
+
+    @Test
+    void rollbackNamesService() {
+        assertTrue(Planner.rollbackNote("billing").contains("billing"));
+        assertTrue(Planner.rollbackNote("billing").contains("dry-run"));
+    }
+
 }
