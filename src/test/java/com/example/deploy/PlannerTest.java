@@ -269,4 +269,10 @@ class PlannerTest {
         assertTrue(Planner.rollbackNote("billing").contains("dry-run"));
     }
 
+
+    @Test
+    void breakerIsAnEcho() {
+        assertTrue(Planner.breakerLine(true).startsWith("echo dry-run"));
+    }
+
 }
