@@ -275,4 +275,10 @@ class PlannerTest {
         assertTrue(Planner.breakerLine(true).startsWith("echo dry-run"));
     }
 
+
+    @Test
+    void noSubnetOverride() {
+        assertTrue(Planner.subnetNote(null).contains("no subnet"));
+    }
+
 }
