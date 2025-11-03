@@ -281,4 +281,10 @@ class PlannerTest {
         assertTrue(Planner.subnetNote(null).contains("no subnet"));
     }
 
+
+    @Test
+    void subnetEcho() {
+        assertTrue(Planner.subnetNote("subnet-a,subnet-b").contains("subnet-a"));
+    }
+
 }
