@@ -287,4 +287,10 @@ class PlannerTest {
         assertTrue(Planner.subnetNote("subnet-a,subnet-b").contains("subnet-a"));
     }
 
+
+    @Test
+    void noSecurityGroupOverride() {
+        assertTrue(Planner.sgNote("").contains("no security group"));
+    }
+
 }
