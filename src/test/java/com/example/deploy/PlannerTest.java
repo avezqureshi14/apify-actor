@@ -293,4 +293,12 @@ class PlannerTest {
         assertTrue(Planner.sgNote("").contains("no security group"));
     }
 
+
+    @Test
+    void freezeCopies() {
+        var frozen = Planner.freeze(java.util.List.of("echo dry-run"));
+        assertEquals(1, frozen.size());
+        assertThrows(UnsupportedOperationException.class, () -> frozen.add("nope"));
+    }
+
 }
