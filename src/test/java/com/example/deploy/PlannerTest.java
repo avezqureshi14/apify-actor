@@ -301,4 +301,11 @@ class PlannerTest {
         assertThrows(UnsupportedOperationException.class, () -> frozen.add("nope"));
     }
 
+
+    @Test
+    void serviceSlash() {
+        assertFalse(Planner.serviceNameOk("prod/billing"));
+        assertTrue(Planner.serviceNameOk("billing"));
+    }
+
 }
