@@ -308,4 +308,11 @@ class PlannerTest {
         assertTrue(Planner.serviceNameOk("billing"));
     }
 
+
+    @Test
+    void longCluster() {
+        assertFalse(Planner.clusterNameOk("c".repeat(80)));
+        assertTrue(Planner.clusterNameOk("prod"));
+    }
+
 }
