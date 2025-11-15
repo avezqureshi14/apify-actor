@@ -5,3 +5,5 @@ Reads a local manifest and prints a dry-run deploy plan: docker build, an ECR pu
 No credentials are read. `dryRun` on the response stays true.
 
 Try `manifest.sample.json` against POST /v1/plan.
+
+GET /health returns ok and dryRun true. It does not touch AWS.
