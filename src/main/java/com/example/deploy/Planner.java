@@ -177,4 +177,12 @@ public class Planner {
         return cluster != null && !cluster.isBlank() && cluster.length() <= 64;
     }
 
+
+    public static String withRegion(String line, String region) {
+        if (region == null || region.isBlank()) {
+            return line;
+        }
+        return line + " --region " + region;
+    }
+
 }
