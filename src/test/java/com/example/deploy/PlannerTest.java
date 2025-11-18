@@ -315,4 +315,10 @@ class PlannerTest {
         assertTrue(Planner.clusterNameOk("prod"));
     }
 
+
+    @Test
+    void blankRegionLeavesLine() {
+        assertEquals("echo dry-run", Planner.withRegion("echo dry-run", " "));
+    }
+
 }
