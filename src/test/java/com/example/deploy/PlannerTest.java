@@ -321,4 +321,10 @@ class PlannerTest {
         assertEquals("echo dry-run", Planner.withRegion("echo dry-run", " "));
     }
 
+
+    @Test
+    void regionFlag() {
+        assertTrue(Planner.withRegion("echo dry-run", "us-east-1").endsWith("--region us-east-1"));
+    }
+
 }
