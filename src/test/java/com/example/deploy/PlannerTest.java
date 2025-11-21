@@ -327,4 +327,10 @@ class PlannerTest {
         assertTrue(Planner.withRegion("echo dry-run", "us-east-1").endsWith("--region us-east-1"));
     }
 
+
+    @Test
+    void singleTask() {
+        new Planner().check(new Manifest("billing", "billing", "prod", "billing", 512, 1024, 1));
+    }
+
 }
