@@ -333,4 +333,10 @@ class PlannerTest {
         new Planner().check(new Manifest("billing", "billing", "prod", "billing", 512, 1024, 1));
     }
 
+
+    @Test
+    void cpu2048() {
+        assertTrue(Planner.fargateCpu(2048));
+    }
+
 }
