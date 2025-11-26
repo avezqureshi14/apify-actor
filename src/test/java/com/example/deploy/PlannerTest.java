@@ -339,4 +339,10 @@ class PlannerTest {
         assertTrue(Planner.fargateCpu(2048));
     }
 
+
+    @Test
+    void zeroMemory() {
+        assertFalse(Planner.memoryFits(512, 0));
+    }
+
 }
