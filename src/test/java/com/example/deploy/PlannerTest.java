@@ -345,4 +345,11 @@ class PlannerTest {
         assertFalse(Planner.memoryFits(512, 0));
     }
 
+
+    @Test
+    void tagLineUsesImage() {
+        DeployPlan plan = new Planner().plan(new Manifest("api", "api", "dev", "api", 256, 512, 1));
+        assertTrue(plan.commands().get(1).contains("api:latest"));
+    }
+
 }
