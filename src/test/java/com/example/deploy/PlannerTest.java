@@ -352,4 +352,11 @@ class PlannerTest {
         assertTrue(plan.commands().get(1).contains("api:latest"));
     }
 
+
+    @Test
+    void ecsLineHasCluster() {
+        DeployPlan plan = new Planner().plan(new Manifest("api", "api", "dev", "api", 256, 512, 1));
+        assertTrue(plan.commands().get(3).contains("--cluster dev"));
+    }
+
 }
