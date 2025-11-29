@@ -7,3 +7,5 @@ No credentials are read. `dryRun` on the response stays true.
 Try `manifest.sample.json` against POST /v1/plan.
 
 GET /health returns ok and dryRun true. It does not touch AWS.
+
+A desired count of 0 is a dry-run scale-down, not an error.
