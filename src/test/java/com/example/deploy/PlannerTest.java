@@ -359,4 +359,10 @@ class PlannerTest {
         assertTrue(plan.commands().get(3).contains("--cluster dev"));
     }
 
+
+    @Test
+    void fourLinesForApi() {
+        assertEquals(4, new Planner().plan(new Manifest("api", "api", "dev", "api", 256, 512, 1)).commands().size());
+    }
+
 }
