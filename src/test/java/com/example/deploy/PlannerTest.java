@@ -365,4 +365,10 @@ class PlannerTest {
         assertEquals(4, new Planner().plan(new Manifest("api", "api", "dev", "api", 256, 512, 1)).commands().size());
     }
 
+
+    @Test
+    void halfCpuTwoGig() {
+        assertTrue(Planner.memoryFits(512, 2048));
+    }
+
 }
