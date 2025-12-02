@@ -371,4 +371,10 @@ class PlannerTest {
         assertTrue(Planner.memoryFits(512, 2048));
     }
 
+
+    @Test
+    void prodDockerfile() {
+        assertTrue(Planner.dockerfileOk("Dockerfile.prod"));
+    }
+
 }
