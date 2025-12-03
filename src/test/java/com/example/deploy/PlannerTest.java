@@ -377,4 +377,10 @@ class PlannerTest {
         assertTrue(Planner.dockerfileOk("Dockerfile.prod"));
     }
 
+
+    @Test
+    void absoluteDockerfile() {
+        assertFalse(Planner.dockerfileOk("/tmp/Dockerfile"));
+    }
+
 }
