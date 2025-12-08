@@ -383,4 +383,10 @@ class PlannerTest {
         assertFalse(Planner.dockerfileOk("/tmp/Dockerfile"));
     }
 
+
+    @Test
+    void zeroGrace() {
+        assertTrue(Planner.graceOk(0));
+    }
+
 }
