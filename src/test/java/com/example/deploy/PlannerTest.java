@@ -389,4 +389,10 @@ class PlannerTest {
         assertTrue(Planner.graceOk(0));
     }
 
+
+    @Test
+    void planTag() {
+        assertTrue(Planner.tagOk("plan"));
+    }
+
 }
