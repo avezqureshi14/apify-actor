@@ -395,4 +395,10 @@ class PlannerTest {
         assertTrue(Planner.tagOk("plan"));
     }
 
+
+    @Test
+    void breakerOff() {
+        assertTrue(Planner.breakerLine(false).contains("off"));
+    }
+
 }
