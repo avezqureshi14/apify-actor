@@ -401,4 +401,10 @@ class PlannerTest {
         assertTrue(Planner.breakerLine(false).contains("off"));
     }
 
+
+    @Test
+    void sgEcho() {
+        assertTrue(Planner.sgNote("sg-1").contains("sg-1"));
+    }
+
 }
