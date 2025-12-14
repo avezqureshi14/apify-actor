@@ -407,4 +407,10 @@ class PlannerTest {
         assertTrue(Planner.sgNote("sg-1").contains("sg-1"));
     }
 
+
+    @Test
+    void shortCluster() {
+        assertTrue(Planner.clusterNameOk("a"));
+    }
+
 }
